@@ -10,11 +10,13 @@ import { ReactComponent as Save } from '../../assets/save.svg';
 const ButtonBar = ({
   onCancel,
   onSave,
+  onUpdate,
   disabled = false,
   isEditing = false,
 }: {
   onCancel: () => void;
   onSave: () => void;
+  onUpdate: () => void;
   disabled?: boolean;
   isEditing?: boolean;
 }) => {
@@ -52,12 +54,12 @@ const ButtonBar = ({
         <Button type="secundary" className="max-lg:!hidden" onClick={onCancel}>
           cancel
         </Button>
-        <Button className="ml-1 max-lg:!hidden" onClick={onSave}>
+        <Button className="ml-1 max-lg:!hidden" onClick={isEditing ? onUpdate : onSave}>
           ok
         </Button>
         <Button className="ml-1 lg:!hidden">
           {shouldDisplayCloseIcon && <Close className="w-[24px] h-[24px]" onClick={onCancel} />}
-          {shouldDisplaySaveIcon && <Save className="w-[24px] h-[24px]" onClick={onSave} />}
+          {shouldDisplaySaveIcon && <Save className="w-[24px] h-[24px]" onClick={onUpdate} />}
           {shouldDisplayPlusIcon && (
             <Close className="w-[24px] h-[24px] rotate-45" onClick={onSave} />
           )}
