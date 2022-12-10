@@ -1,11 +1,10 @@
-import { ReactComponent as Logo } from 'assets/favicon.svg';
+import TaskContainer from './components/TaskContainer/TaskContainer';
 
 function App() {
   return (
-    <div className="App">
-      <Logo height={100} width={100} />
-
-      <h1>Hola Mundo</h1>
+    <div className="App max-w-[1360px] mx-auto px-4 pt-4">
+      <h1 className="text-2xl mb-4">Task list</h1>
+      <TaskContainer />
     </div>
   );
 }
