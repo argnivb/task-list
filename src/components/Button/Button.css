@@ -1,6 +1,6 @@
 .btn {
-  @apply rounded py-3 px-6 font-medium capitalize text-sm leading-none cursor-auto flex items-center
-  disabled:opacity-60 transition duration-300 ease-in-out h-10;
+  @apply rounded p-2 lg:py-3 lg:px-6 font-medium capitalize text-sm leading-none cursor-auto flex items-center justify-center
+  disabled:opacity-60 transition duration-300 ease-in-out h-[40px] w-[40px] lg:h-10 lg:w-auto;
 }
 .btn-primary {
   @apply bg-primary text-white hover:bg-blue-600 active:bg-blue-800 disabled:active:bg-primary
@@ -11,6 +11,6 @@
   disabled:hover:bg-secondry;
 }
 .btn-outline {
-  @apply bg-transparent text-gray-500 border border-gray-300 hover:bg-primary hover:text-white active:bg-blue-800
+  @apply bg-transparent text-gray-500 border border-gray-300 hover:bg-primary hover:text-white hover:border-primary active:bg-blue-800
   disabled:active:bg-transparent disabled:hover:bg-transparent disabled:hover:text-gray-500;
 }
