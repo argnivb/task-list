@@ -6,7 +6,7 @@ import { ReactComponent as Sun } from '../../assets/sun.svg';
 import { ReactComponent as Circle } from '../../assets/circle.svg';
 import { ReactComponent as Close } from '../../assets/x.svg';
 
-export const ButtonBar = () => {
+const ButtonBar = () => {
   return (
     <div className="p-2 border flex justify-between rounded-b bg-[#FAFBFB]">
       <div className="flex">
@@ -45,3 +45,5 @@ export const ButtonBar = () => {
     </div>
   );
 };
+
+export default ButtonBar;
