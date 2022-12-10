@@ -12,5 +12,5 @@
 }
 .btn-outline {
   @apply bg-transparent text-gray-500 border border-gray-300 hover:bg-primary hover:text-white hover:border-primary active:bg-blue-800
-  disabled:active:bg-transparent disabled:hover:bg-transparent disabled:hover:text-gray-500;
+  disabled:active:bg-transparent disabled:hover:bg-transparent disabled:hover:text-gray-500 disabled:hover:border-gray-300;
 }
