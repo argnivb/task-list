@@ -10,7 +10,7 @@ const TaskInput = ({
   value: string;
   onChange: (event: ChangeEvent<HTMLTextAreaElement>) => void;
 }) => {
-  const memorizedValue = useMemo(() => !!value, [value]);
+  const isValueEmpty = useMemo(() => !value, [value]);
   const textArea = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const TaskInput = ({
       <PlusSquare className="absolute left-4 top-[10px] stroke-primary" />
       <Avatar
         img="https://mdbcdn.b-cdn.net/img/new/avatars/22.webp"
-        className={clsx('absolute right-2 top-[10px] w-6', !memorizedValue && 'opacity-50')}
+        className={clsx('absolute right-2 top-[10px] w-6', isValueEmpty && 'opacity-50')}
       />
       <textarea
         ref={textArea}
