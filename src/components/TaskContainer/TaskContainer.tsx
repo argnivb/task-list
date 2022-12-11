@@ -37,6 +37,10 @@ const TaskContainer = () => {
   }, [handleClose, message]);
 
   const handleUpdate = useCallback(() => {
+    if (!message) {
+      return handleClose();
+    }
+
     setTasks((tasks) =>
       tasks.map((task) => {
         if (task.id === selectedTask?.id) {
