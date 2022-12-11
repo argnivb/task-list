@@ -18,7 +18,7 @@ const TaskInput = ({
       textArea.current.setSelectionRange(value.length, value.length);
       textArea.current.focus();
     }
-  }, [value.length]);
+  }, []);
 
   return (
     <div className="relative flex flex-col">
