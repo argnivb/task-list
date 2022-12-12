@@ -21,6 +21,7 @@ const TaskItem = ({ message, onEdit }: { message: string; onEdit: () => void }) 
           linkDecorator={LinkDecorator}
           termDecorator={TermDecorator}
           terms={[terms.hashTag.regExp, terms.userTag.regExp]}
+          linkTarget="_blank"
         >
           {message.replaceAll(globalRegex, replacer)}
         </ReactTextFormat>
